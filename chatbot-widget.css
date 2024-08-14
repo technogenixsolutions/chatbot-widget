@@ -1,0 +1,208 @@
+/* Style for the round button */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+#chatbot-button {
+  width: 60px;
+  height: 60px;
+  /* background-color: #3e247e; */
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+#chatbot-button:hover {
+  transform: scale(1.1);
+}
+
+#chatbot-button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  background-image: url("https://img.icons8.com/?size=100&id=gVfil5zfvJU8&format=png&color=ffffff"); /* Use an SVG icon */
+  background-size: cover;
+  transform: translate(-50%, -50%);
+}
+
+/* Style for the chat window */
+#chatbot-window {
+  width: 320px;
+  height: 450px;
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  max-height: 90vh; /* Ensure the chat window doesn't overflow */
+}
+
+#chatbot-header {
+  /* background: linear-gradient(135deg, #3e247e, #6a1b9a); */
+  color: white;
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#chatbot-header span {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#close-chatbot {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#close-chatbot:hover {
+  color: #ffeb3b;
+}
+
+#chatbot-messages {
+  flex: 1;
+  padding: 12px;
+  overflow-y: scroll;
+  background: #ffffff;
+}
+
+#chatbot-input {
+  border: none;
+  padding: 10px;
+  border-top: 1px solid #ccc;
+  width: calc(
+    100% - 20px
+  ); /* Ensure the input field fits within the chat window */
+  margin: 0 10px 10px 10px; /* Adjusted margin to fit properly */
+  border-radius: 8px;
+  font-size: 14px;
+  background: #f1f1f1;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+#chatbot-input:focus {
+  outline: none;
+  background: #ffffff;
+  border: 1px solid #3e247e;
+}
+
+#chatbot-messages p {
+  margin: 5px 0;
+}
+
+#chatbot-messages p strong {
+  color: #3e247e;
+}
+
+/* Style for the initial prompt */
+#initial-prompt {
+  position: fixed;
+  bottom: 100px;
+  right: 20px;
+  width: 320px; /* Adjusted width for consistency */
+  background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  display: none; /* Initially hidden */
+  z-index: 1001;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+#prompt-header {
+  /* background: linear-gradient(
+    135deg,
+    #3e247e,
+    #6a1b9a
+  );  */
+  /* color: white; */
+  padding: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+#prompt-header span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#close-prompt {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#close-prompt:hover {
+  color: #ffeb3b;
+}
+
+#initial-prompt p {
+  margin: 0;
+  font-size: 16px;
+  color: #333;
+}
+
+#initial-prompt input[type="text"],
+#initial-prompt input[type="email"] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin: 10px 0;
+  border: 2px solid #3e247e;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+#initial-prompt input[type="text"]:focus,
+#initial-prompt input[type="email"]:focus {
+  border-color: #3e247e;
+  outline: none;
+}
+
+#initial-prompt button {
+  /* background-color: #3e247e; */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+#initial-prompt button:hover {
+  background-color: #2c1a5b;
+}
+
+#rounded-img{
+  border-radius: 50%;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="/chatbot-widget.js" defer></script>
+  </head>
+  <body>
+    <p>i am</p>
+    <script>
+    addEventListener("load", function () {
+        createChatWidget({
+          chatbotId: "your-chatbot-id",
+          accessKey: "your-access-key",
+          hostUrl: "your-host-url",
+          appearance: {
+            name: "ChatBot Test",
+            primaryColor: "#0061ff",
+            secondaryColor: "#60efff",
+            fontFamily: "Arial, sans-serif",
+            clientImg:
+              "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg",
+            botImg:
+              "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpYpg7YkagvlGPRI0N1VsT5xWvsfvsflJQpg&s",
+            position: "bottom-right",
+          },
+          qna: {},
+        });
+      });
+    </script>
+  </body>
+</html>
